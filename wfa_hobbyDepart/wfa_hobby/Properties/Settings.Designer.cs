@@ -28,9 +28,9 @@ namespace wfa_hobby.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=bd-tinfo;Initial Catalog=PMV_hobby;Integrated Security=True;Encrypt=F" +
             "alse")]
-        public string maConnection {
+        public string maConnectionString {
             get {
-                return ((string)(this["maConnection"]));
+                return ((string)(this["maConnectionString"]));
             }
         }
     }

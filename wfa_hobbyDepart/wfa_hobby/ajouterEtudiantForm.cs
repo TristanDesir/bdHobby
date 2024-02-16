@@ -21,9 +21,44 @@ namespace wfa_hobby
         {
            
         }
+        private bool TextBoxSontRemplis()
+        {
+            return (prenomTextBox.Text != "" && nomTextBox.Text !="" && cellulaireTextBox.Text !="" );
+        }
+        private Etudiants PrendreLesValeursDesTextBox()
+        {
+            Etudiants etudiants = new Etudiants();
+            etudiants.Nom = nomTextBox.Text;
+            etudiants.Prenom = prenomTextBox.Text;
+            etudiants.Cellulaire = cellulaireTextBox.Text;
+            etudiants.Humour = (int)humourNumericUpDown.Value;
+            etudiants.No_provenance = 1;//remplacer plus tard
+            return etudiants;
+        }
 
         private void ajouterButton_Click(object sender, EventArgs e)
-        {
+        { 
+            Etudiants etudiant = new Etudiants();
+           
+            try
+            {
+                if (TextBoxSontRemplis())
+                {
+                    //prendre les valeurs 
+                    etudiant = PrendreLesValeursDesTextBox();
+                                    //appeler fonction d'ajout
+                }
+                else
+                {
+                    MessageBox.Show("Remplisser toutes les valeurs");
+                }
+            }
+            catch (Exception) 
+            {
+
+                throw;
+            }
+
         }
     }
 }

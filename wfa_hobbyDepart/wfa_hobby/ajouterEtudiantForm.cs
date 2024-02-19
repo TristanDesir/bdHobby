@@ -39,6 +39,8 @@ namespace wfa_hobby
         private void ajouterButton_Click(object sender, EventArgs e)
         { 
             Etudiants etudiant = new Etudiants();
+            ManagerEtudiants managerEtudiants = new ManagerEtudiants();
+            int NombreLignesAffectees = 0;
            
             try
             {
@@ -47,16 +49,18 @@ namespace wfa_hobby
                     //prendre les valeurs 
                     etudiant = PrendreLesValeursDesTextBox();
                                     //appeler fonction d'ajout
+                    NombreLignesAffectees
+
                 }
                 else
                 {
                     MessageBox.Show("Remplisser toutes les valeurs");
                 }
             }
-            catch (Exception) 
+            catch (Exception ex) 
             {
 
-                throw;
+                MessageBox.Show(ex.Message, "Erreur");
             }
 
         }

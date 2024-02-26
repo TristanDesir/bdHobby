@@ -10,7 +10,12 @@ namespace wfa_hobby
     {
         public List<Provenance> ListerProvenance()
         {
-            List<Provenance>
+            List<Provenance> maListe = new List<Provenance>();
+            try
+            {
+
+            
+
             using(var maConnexion = new SqlConnection(Properties.Settings.Default.maConnectionString))
             {
                 using (var maCommande = new SqlCommand("Lister Provenance", maConnexion))
@@ -20,6 +25,7 @@ namespace wfa_hobby
                     // definir parametres 
                     
                     // ouvrir connexion
+
                     // executer sp
                     using (var monDataReader = maCommande.ExecuteReader())
                     {
@@ -32,10 +38,12 @@ namespace wfa_hobby
                         }
                     }
                     // lire resultats
+
+                    using (var monDataReader.Read()) 
                 }
 
             }
             return maListe;
-        }
+        }}
     }
 }

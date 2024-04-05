@@ -16,5 +16,15 @@ namespace wfa_hobby
         {
             InitializeComponent();
         }
+
+        private void etudiantComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hobbyComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

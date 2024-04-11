@@ -43,7 +43,6 @@ namespace wfa_hobby
             }
             catch (Exception)
             {
-
                 throw;
             }
             return nombreDeLigneAffectee;

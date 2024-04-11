@@ -1,4 +1,4 @@
-﻿r        using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,9 @@ namespace wfa_hobby
         private string cellulaire;
         private int humour;
         private int no_provenance;
+        private string nomComplet;
 
+        public string NomComplet { get { return $"{Nom}, {Prenom}, {Cellulaire}"; } }
         public int No_etudiants { get => no_etudiants; set => no_etudiants = value; }
         public string Prenom { get => prenom; set => prenom = value; }
         public string Nom { get => nom; set => nom = value; }

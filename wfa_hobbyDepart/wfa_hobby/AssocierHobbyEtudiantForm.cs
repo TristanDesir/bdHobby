@@ -26,5 +26,26 @@ namespace wfa_hobby
         {
 
         }
+
+        private void etudiantComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            ManagerEtudiantHobby managerEtudiantHobby = new ManagerEtudiantHobby();
+            hobbyDataGridView.DataSource = managerEtudiantHobby.ListerHobbyDUnEtudiant((int)etudiantComboBox.SelectedValue);
+            hobbyDataGridView.Columns["no_hobby"].Visible = false;
+            hobbyDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            hobbyDataGridView.RowHeadersVisible = false;
+            hobbyDataGridView.
+        }
+
+        private void hobbyDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void AssocierHobbyEtudiantForm_Load(object sender, EventArgs e)
+        {
+            remplirComboBoxEtudiant();
+
+        }
     }
 }

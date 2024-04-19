@@ -11,11 +11,11 @@ namespace wfa_hobby
         private List<SqlParameter> definirParametresAjout (Etudiants etudiant)
         {
             List<SqlParameter> mesParametres = new List<SqlParameter>();
-            mesParametres.Add(new SqlParameter("@prenom", etudiants.Prenom == string.Empty ? DBNull.Value : etudiants.Prenom));
-            mesParametres.Add(new SqlParameter("@Nom", etudiants.Nom == string.Empty ? DBNull.Value : etudiants.Nom));
-            mesParametres.Add(new SqlParameter("@humour", etudiants.Humour == string.Empty ? DBNull.Value : etudiants.Humour));
-            mesParametres.Add(new SqlParameter("@Cellulaire", etudiants.Cellulaire == string.Empty ? DBNull.Value : etudiants.Cellulaire));
-            mesParametres.Add(new SqlParameter("@No_provenance", etudiants.No_provenance == string.Empty ? DBNull.Value : etudiants.No_provenance));
+            mesParametres.Add("@prenom", etudiants.Prenom == string.Empty ? DBNull.Value : etudiants.Prenom));
+            mesParametres.Add("@Nom", etudiants.Nom == string.Empty ? DBNull.Value : etudiants.Nom));
+            mesParametres.Add("@humour", etudiants.Humour == string.Empty ? DBNull.Value : etudiants.Humour));
+            mesParametres.Add("@Cellulaire", etudiants.Cellulaire == string.Empty ? DBNull.Value : etudiants.Cellulaire));
+            mesParametres.Add("@No_provenance", etudiants.No_provenance == string.Empty ? DBNull.Value : etudiants.No_provenance));
         }
         public int AjouterEtudiants(Etudiants etudiants)
         {

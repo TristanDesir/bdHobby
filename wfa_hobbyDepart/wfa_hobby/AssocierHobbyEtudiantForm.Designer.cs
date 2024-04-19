@@ -33,6 +33,8 @@
             label1 = new Label();
             label2 = new Label();
             associerHobbyButton = new Button();
+            hobbyDataGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)hobbyDataGridView).BeginInit();
             SuspendLayout();
             // 
             // etudiantComboBox
@@ -43,6 +45,7 @@
             etudiantComboBox.Size = new Size(121, 23);
             etudiantComboBox.TabIndex = 0;
             etudiantComboBox.SelectedIndexChanged += etudiantComboBox_SelectedIndexChanged;
+            etudiantComboBox.SelectionChangeCommitted += etudiantComboBox_SelectionChangeCommitted;
             // 
             // hobbyComboBox
             // 
@@ -80,11 +83,21 @@
             associerHobbyButton.Text = "Associer l'hobby";
             associerHobbyButton.UseVisualStyleBackColor = true;
             // 
+            // hobbyDataGridView
+            // 
+            hobbyDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            hobbyDataGridView.Location = new Point(12, 141);
+            hobbyDataGridView.Name = "hobbyDataGridView";
+            hobbyDataGridView.Size = new Size(240, 150);
+            hobbyDataGridView.TabIndex = 5;
+            hobbyDataGridView.CellContentClick += hobbyDataGridView_CellContentClick;
+            // 
             // AssocierHobbyEtudiantForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(hobbyDataGridView);
             Controls.Add(associerHobbyButton);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -92,6 +105,8 @@
             Controls.Add(etudiantComboBox);
             Name = "AssocierHobbyEtudiantForm";
             Text = "AssocierHobbyEtudiantForm";
+            Load += AssocierHobbyEtudiantForm_Load;
+            ((System.ComponentModel.ISupportInitialize)hobbyDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -103,5 +118,6 @@
         private Label label1;
         private Label label2;
         private Button associerHobbyButton;
+        private DataGridView hobbyDataGridView;
     }
 }
